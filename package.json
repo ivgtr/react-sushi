@@ -1,7 +1,6 @@
 {
   "name": "react-sushi",
   "description": "🍣 react sushi component",
-  "private": true,
   "license": "MIT",
   "version": "0.1.0",
   "repository": {
