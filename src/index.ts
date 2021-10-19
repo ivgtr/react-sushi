@@ -1,3 +1,3 @@
-import { Sushi } from "./components/Sushi";
+import { Face, Neta, Sara, Shari } from "./components/Sushi";
 
-export { Sushi };
+export { Sara, Shari, Neta, Face };
