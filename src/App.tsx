@@ -1,5 +1,5 @@
 import React from "react";
-import { Sushi } from "./components/Sushi";
+import { Face, Neta, Sara, Shari } from "./components/Sushi";
 
 export const App = () => {
   return (
@@ -15,12 +15,15 @@ export const App = () => {
           display: "flex",
           justifyContent: "center",
           width: "100%",
-          marginTop: "60px",
         }}
       >
-        <Sushi />
+        <Sara>
+          <Shari />
+          <Face.Normal />
+          <Neta.Salmon />
+        </Sara>
       </div>
-      <div style={{ width: "80%", margin: "40px auto 0" }}>
+      <div style={{ maxWidth: "640px", width: "80%", margin: "20px auto 0" }}>
         <pre
           style={{
             backgroundColor: "#f6f8fa",
@@ -31,9 +34,19 @@ export const App = () => {
             padding: "16px",
             overflowWrap: "normal",
             boxSizing: "border-box",
-            cursor: "pointer",
           }}
-        >{`<Sushi />`}</pre>
+        >{`import React from "react";
+import { Face, Neta, Sara, Shari } from "./components/Sushi";
+
+export const Sushi = () => {
+  return ( 
+    <Sara>
+      <Shari />
+      <Face.Normal />
+      <Neta.Salmon />
+    </Sara>
+  )
+}`}</pre>
       </div>
       <div style={{ margin: "60px auto 0", textAlign: "center" }}>
         <p>
