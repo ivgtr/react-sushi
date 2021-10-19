@@ -19,12 +19,27 @@ npm install react-sushi
 ```
 
 ```tsx
-import { Sushi } from 'react-sushi';
+import React from "react";
+import { Face, Neta, Sara, Shari } from "./components/Sushi";
 
-~~
-
-<Sushi />
+export const Sushi = () => {
+  return (
+    <Sara>
+      <Shari />
+      <Face.Normal />
+      <Neta.Salmon />
+    </Sara>
+  );
+};
 ```
+
+### Options
+
+| Component | Choices  | Props             |
+| :-------: | :------- | :---------------- |
+|  `Sara`   |          | `zindex`, `scale` |
+|  `Face`   | `Normal` |                   |
+|  `Neta`   | `Salmon` |                   |
 
 ### そのうち
 
