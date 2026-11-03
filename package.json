@@ -41,21 +41,23 @@
     "build": "vite build && tsc --emitDeclarationOnly",
     "build:docs": "vite build -c vite.docs.config.ts",
     "format": "prettier -w \"./src/**/*.{js,jsx,ts,tsx,css}\"",
-    "lint": "eslint ./src/**/*.tsx",
-    "lint:styles": "stylelint src/styles.scss && prettier --check src/styles.scss"
+    "lint": "node scripts/test-minimatch-compat.cjs && cross-env ESLINT_USE_FLAT_CONFIG=false eslint ./src/**/*.tsx",
+    "lint:styles": "stylelint src/styles.scss && prettier --check src/styles.scss",
+    "test:compat": "node scripts/test-minimatch-compat.cjs"
   },
   "devDependencies": {
     "@types/node": "^22.12.0",
     "@types/react": "^17.0.30",
     "@types/react-dom": "^17.0.9",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.72.1",
+    "@typescript-eslint/parser": "^8.72.1",
     "@vitejs/plugin-react": "^4.7.0",
-    "eslint": "^8.0.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.39.5",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "postcss-scss": "^4.0.9",
     "prettier": "^2.4.1",
     "react": "17.0.2",
@@ -75,5 +77,8 @@
   },
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
+  },
+  "overrides": {
+    "minimatch": "file:vendor/minimatch-compat"
   }
 }
