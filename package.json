@@ -24,8 +24,7 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/react-sushi.es.js",
       "require": "./dist/react-sushi.umd.js"
-    },
-    "./style.css": "./dist/style.css"
+    }
   },
   "files": [
     "dist"
