@@ -1,4 +1,4 @@
-import reactPlugin from "@vitejs/plugin-react-refresh";
+import reactPlugin from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
 const config = defineConfig({
@@ -6,7 +6,7 @@ const config = defineConfig({
   build: {
     outDir: "docs",
   },
-  plugins: [reactPlugin()],
+  plugins: [reactPlugin({ jsxRuntime: "classic" })],
 });
 
 export default config;

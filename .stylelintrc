@@ -1,17 +1,13 @@
 {
   "extends": [
     "stylelint-config-standard",
-    "stylelint-prettier/recommended",
     "stylelint-config-recess-order"
   ],
-  "syntax": "scss",
   "plugins": [
     "stylelint-scss",
-    "stylelint-order",
-    "stylelint-prettier"
+    "stylelint-order"
   ],
   "rules": {
-    "prettier/prettier": true,
     "order/order": [
       [
         "dollar-variables",
@@ -32,5 +28,6 @@
         ]
       }
     ]
-  }
+  },
+  "customSyntax": "postcss-scss"
 }
